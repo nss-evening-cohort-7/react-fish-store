@@ -8,8 +8,8 @@ import './Register.css';
 class Register extends React.Component {
   state = {
     user: {
-      email: 'zoeames@gmail.com',
-      password: '123456',
+      email: '',
+      password: '',
     },
   };
 
