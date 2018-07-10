@@ -7,7 +7,6 @@ import './Fish.css';
 class Fish extends React.Component {
 
   addCLickEvent = () => {
-    console.error('fish?', this.props.details.id);
     this.props.addToOrder(this.props.details.id);
   }
 

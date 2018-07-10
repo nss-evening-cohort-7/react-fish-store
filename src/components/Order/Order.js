@@ -1,5 +1,7 @@
 import React from 'react';
 
+import formatPrice from '../../helpers';
+
 import './Order.css';
 
 class Order extends React.Component {
@@ -9,8 +11,16 @@ class Order extends React.Component {
     const count = this.props.order[key];
 
     return (
-      <li>
-        {count} lbs {fish.name}
+      <li
+        key={key}
+        className="text-left"
+      >
+        <div className="col-xs-2 count">{count} lbs</div>
+        <div className="col-xs-5">{fish.name}</div>
+        <div className="col-xs-3">{formatPrice(fish.price)}</div>
+        <div className="col-xs-2">
+          <button className="btn btn-default">&times;</button>
+        </div>
       </li>
     );
   }
